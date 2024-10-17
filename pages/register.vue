@@ -1,10 +1,12 @@
-<script lang="ts" setup></script>
+<script setup>
+const state = ref(0)
+</script>
 
 <template>
-    <div class="w-full h-[100vh]">
-        <section class="flex justify-center items-center ">
-            <div class="bg-[#11141A] w-96 h-[605px] rounded-xl">
-                <div class="flex justify-center items-center my-8 *:mx-4 *:w-20 *:text-center *:font-semibold">
+    <div class="w-full h-svh overflow-hidden">
+        <section class="flex justify-center items-center gap-20 mt-2">
+            <div class="bg-[#11141A] w-96 h-[37rem] rounded-xl">
+                <div class="flex justify-center items-center my-4 *:mx-4 *:w-20 *:text-center *:font-semibold">
                     <NuxtLink to="/login" class="text-2xl">ورود</NuxtLink>
                     <NuxtLink to="/register" class="text-2xl active">ثبت نام</NuxtLink>
                 </div>
@@ -27,16 +29,30 @@
                         <h2 class="mb-3">رمز عبور :</h2>
                         <label
                             class="input input-sm bg-transparent input-bordered flex items-center w-80 !border-[#cecece] !outline-none p-4">
-                            <Icon name="mage:eye-fill" class="w-6 h-6" />
-                            <input type="text" class="grow" />
+                            <div v-if="state != 1" class="flex">
+                                <Icon @click="state = 1" name="mage:eye-fill"
+                                    class="w-6 h-6 active:-rotate-90 transition-all" />
+                            </div>
+                            <div v-else class="flex">
+                                <Icon @click="state = 0" name="mage:eye-off"
+                                    class="w-6 h-6 active:rotate-90 transition-all" />
+                            </div>
+                            <input :type="state == 1 ? 'text' : 'password'" class="grow" />
                         </label>
                     </div>
                     <div>
                         <h2 class="mb-3">تکرار رمز عبور :</h2>
                         <label
                             class="input input-sm bg-transparent input-bordered flex items-center w-80 !border-[#cecece] !outline-none p-4">
-                            <Icon name="mage:eye-off" class="w-6 h-6" />
-                            <input type="text" class="grow" />
+                            <div v-if="state != 1" class="flex">
+                                <Icon @click="state = 1" name="mage:eye-fill"
+                                    class="w-6 h-6 active:-rotate-90 transition-all" />
+                            </div>
+                            <div v-else class="flex">
+                                <Icon @click="state = 0" name="mage:eye-off"
+                                    class="w-6 h-6 active:rotate-90 transition-all" />
+                            </div>
+                            <input :type="state == 1 ? 'text' : 'password'" class="grow" />
                         </label>
                     </div>
                     <NuxtLink to=""
@@ -63,9 +79,9 @@
                     </div>
                 </form>
             </div>
-            <div class="flex flex-col items-center mr-20">
-                <img class="mt-6" src="/assets/img/logo.svg" alt="" />
-                <img class="mt-6" src="/assets/img/team.svg" alt="" />
+            <div class="flex flex-col items-center ">
+                <img src="/assets/img/logo.svg" alt="" />
+                <img src="/assets/img/team.svg" alt="" />
             </div>
         </section>
     </div>

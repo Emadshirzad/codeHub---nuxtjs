@@ -1,8 +1,12 @@
-<script lang="ts" setup></script>
+<script setup>
+
+const state = ref(0)
+
+</script>
 
 <template>
   <div class="w-full h-[100vh]">
-    <section class="flex justify-center items-center ">
+    <section class="flex justify-center items-center gap-20 ">
       <div class="bg-[#11141A] w-96 h-[500px] rounded-xl">
         <div class="flex justify-center items-center my-8 *:mx-4 *:w-20 *:text-center *:font-semibold">
           <NuxtLink to="/login" class="text-2xl active">ورود</NuxtLink>
@@ -24,12 +28,17 @@
             <h2 class="mb-3">رمز عبور :</h2>
             <label
               class="input input-sm bg-transparent input-bordered flex relative items-center w-80 !border-[#cecece] !outline-none p-4">
-              <Icon name="mage:eye-fill" class="w-6 h-6" />
+              <div v-if="state != 1" class="flex">
+                <Icon @click="state = 1" name="mage:eye-fill" class="w-6 h-6 active:-rotate-90 transition-all" />
+              </div>
+              <div v-else class="flex">
+                <Icon @click="state = 0" name="mage:eye-off" class="w-6 h-6 active:rotate-90 transition-all" />
+              </div>
               <div>
                 <p class="text-lg absolute left-3 top-2">****</p>
                 <p class="text-lg absolute left-12 top-1 w-[1px]  h-6 bg-[#cecece]"></p>
               </div>
-              <input dir="ltr" type="text" class="grow px-10" />
+              <input :type="state == 1 ? 'text' : 'password'" class="grow" />
             </label>
           </div>
           <NuxtLink to=""
@@ -60,9 +69,9 @@
           </div>
         </form>
       </div>
-      <div class="flex flex-col items-center mr-20">
-        <img class="mt-6" src="/assets/img/logo.svg" alt="" />
-        <img class="mt-6" src="/assets/img/team.svg" alt="" />
+      <div class="flex flex-col items-center mt-10 ">
+        <img src="/assets/img/logo.svg" alt="" />
+        <img src="/assets/img/team.svg" alt="" />
       </div>
     </section>
   </div>
