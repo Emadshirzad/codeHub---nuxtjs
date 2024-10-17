@@ -3,7 +3,7 @@
 <template>
   <div class="w-full h-[100vh]">
     <section class="flex justify-center items-center ">
-      <div class="bg-[#11141A] w-96 h-[600px] rounded-xl">
+      <div class="bg-[#11141A] w-96 h-[500px] rounded-xl">
         <div class="flex justify-center items-center my-8 *:mx-4 *:w-20 *:text-center *:font-semibold">
           <NuxtLink to="/login" class="text-2xl active">ورود</NuxtLink>
           <NuxtLink to="/register" class="text-2xl">ثبت نام</NuxtLink>
@@ -50,13 +50,13 @@
         <form action="" class="flex items-center justify-center *:mx-2 mt-3">
           <div
             class="!flex !items-center btn hover:!bg-[#4FC3F7] hover:!border-none hover:text-black !bg-transparent text-white !min-h-2 h-10">
+            <Icon name="logos:google-icon" class="w-4 h-4" />
             <NuxtLink to="">ثبت نام با گوگل</NuxtLink>
-            <Icon name="logos:google-icon" class="w-4 h-4 mr-2" />
           </div>
           <div
             class="!flex !items-center btn hover:!bg-[#4FC3F7] hover:!border-none hover:text-black !bg-transparent text-white !min-h-2 h-10">
+            <Icon name="bx:bxl-github" class="w-6 h-6" />
             <NuxtLink to="">ثبت نام با گیتهاب</NuxtLink>
-            <Icon name="bx:bxl-github" class="w-6 h-6 mr-2" />
           </div>
         </form>
       </div>
