@@ -24,7 +24,7 @@
             <h2 class="mb-3">رمز عبور :</h2>
             <label
               class="input input-sm bg-transparent input-bordered flex relative items-center w-80 !border-[#cecece] !outline-none p-4">
-              <Icon name="ph:eye-slash" class="w-6 h-6" />
+              <Icon name="mage:eye-fill" class="w-6 h-6" />
               <div>
                 <p class="text-lg absolute left-3 top-2">****</p>
                 <p class="text-lg absolute left-12 top-1 w-[1px]  h-6 bg-[#cecece]"></p>
@@ -61,8 +61,8 @@
         </form>
       </div>
       <div class="flex flex-col items-center mr-20">
-        <img class="mt-14" src="/assets/img/logo.svg" alt="" />
-        <img class="mt-14" src="/assets/img/team.svg" alt="" />
+        <img class="mt-6" src="/assets/img/logo.svg" alt="" />
+        <img class="mt-6" src="/assets/img/team.svg" alt="" />
       </div>
     </section>
   </div>

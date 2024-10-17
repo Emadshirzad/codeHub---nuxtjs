@@ -27,7 +27,7 @@
                         <h2 class="mb-3">رمز عبور :</h2>
                         <label
                             class="input input-sm bg-transparent input-bordered flex items-center w-80 !border-[#cecece] !outline-none">
-                            <Icon name="ph:eye-slash" class="w-6 h-6" />
+                            <Icon name="mage:eye-fill" class="w-6 h-6" />
                             <input type="text" class="grow" />
                         </label>
                     </div>
@@ -35,7 +35,7 @@
                         <h2 class="mb-3">تکرار رمز عبور :</h2>
                         <label
                             class="input input-sm bg-transparent input-bordered flex items-center w-80 !border-[#cecece] !outline-none">
-                            <Icon name="ph:eye-light" class="w-6 h-6" />
+                            <Icon name="mage:eye-off" class="w-6 h-6" />
                             <input type="text" class="grow" />
                         </label>
                     </div>
@@ -64,8 +64,8 @@
                 </form>
             </div>
             <div class="flex flex-col items-center mr-20">
-                <img class="mt-14" src="/assets/img/logo.svg" alt="" />
-                <img class="mt-14" src="/assets/img/team.svg" alt="" />
+                <img class="mt-6" src="/assets/img/logo.svg" alt="" />
+                <img class="mt-6" src="/assets/img/team.svg" alt="" />
             </div>
         </section>
     </div>
